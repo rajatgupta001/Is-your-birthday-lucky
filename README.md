@@ -14,7 +14,7 @@ example:
 <label for="date-of-birth">Date Of Birth</label>
 <input type = "date" class = ".date-of-birth">
 
-There are various types in the input taf such as date, number etc.
+There are various types in the input taf such as date, number and radio etc.
 
 
 dob.charAt(i): This is giving us character at the position i in the string.
