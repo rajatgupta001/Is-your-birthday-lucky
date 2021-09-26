@@ -20,3 +20,7 @@ There are various types in the input taf such as date, number and radio etc.
 dob.charAt(i): This is giving us character at the position i in the string.
 Number(dob.charAt(i)): we are typecasting and converting a character into a number.
 dob.replaceAll("-", ""): we used replaceAll to replace all the - from the string dob.
+
+To change name in the tab:
+<title>Is Your Birthday Lucky</title>
+
