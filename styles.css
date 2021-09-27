@@ -1,6 +1,7 @@
 body{
-    background-color: mediumslateblue;
+    /**background-color: mediumslateblue;**/
     color: white;
+    background-color: black;
 }
 
 .container{
@@ -39,4 +40,8 @@ a{
 
 h3{
     text-align: center;
+}
+
+.result-positive, .result-negative{
+    color: white;
 }

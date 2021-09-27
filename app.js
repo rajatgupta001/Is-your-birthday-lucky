@@ -1,7 +1,8 @@
 const dob = document.querySelector(".date-of-birth");
 const luckyNumber = document.querySelector(".lucky-number");
 const btnCheck = document.querySelector(".btn-chk");
-const result = document.querySelector(".result");
+const resultPositive = document.querySelector(".result-positive");
+const resultNegative = document.querySelector(".result-negative");
 
 function sumOfDigits(dob)
 {
@@ -15,16 +16,19 @@ function sumOfDigits(dob)
 }
 
 function luckyOrNot(sum){
-    if(sum % luckyNumber.value === 0)
-        return "Congrats! your birthdate is LUCKY";
-    else
-        return "Your birthday is not lucky, so sad";
+    if(sum % luckyNumber.value === 0){
+        resultNegative.style.display = "none";
+        resultPositive.innerText = "Congrats! your birthday is LUCKY";
+    }
+    else{
+        resultPositive.style.display = "none";
+        resultNegative.innerText = "Your birthday is not lucky, so sad";
+    }
 }
 
-function clickHandler(){
-    const sum = sumOfDigits(dob.value);
-    result.innerText = luckyOrNot(sum);
-};
+function clickEventHandler(){
+    var sum = sumOfDigits(dob.value);
+    luckyOrNot(sum);
+}
 
-btnCheck.addEventListener("click", clickHandler);
-
+btnCheck.addEventListener("click", clickEventHandler);
